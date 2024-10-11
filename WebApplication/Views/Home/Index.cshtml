@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/styles.css"> <!-- Odkaz na externí styl -->
+    <title>3D Tisk na Zakázku</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-content">
+            <h1>3D TISK NA ZAKÁZKU</h1>
+            <p>Zabýváme se 3D tiskem různých objektů, modelů, prostě co si zákazník bude přát.</p>
+        </div>
+    </header>
+
+    <!-- ODDĚLOVAČ -->
+    <div class="divider"></div>
+
+    <!-- HLAVNÍ SEKCE -->
+    <main>
+        <section class="about">
+            <h2>Naše Služby</h2>
+            <p>
+                Nabízíme profesionální návrh a tisk 3D modelů na zakázku. Modely mohou být použity pro různé účely – od výstavních prototypů po funkční součástky. Vytvoříme pro vás přesně to, co potřebujete!
+            </p>
+        </section>
+        <section class="about">
+            <h2>Jak to funguje?</h2>
+            <ol>
+                <li>Vyplníte formulář.</li>
+                <li>Nahrajete soubor či odkaz na model.</li>
+                <li>Dáte odeslat.</li>
+                <li>A my se pokusíme vaši poptávku co nejrychleji nacenit a poslat vám cenu za model.</li>
+                <li>A nakonec? Rozhodnete se, jestli vám cena vyhovuje, dáte ANO/NE.</li>
+                <li>A my se pustíme do tisku!</li>
+            </ol>
+        </section>
+
+        <!-- FORMULÁŘ -->
+        <section class="form-section">
+            <h2>Nacenění zakázky</h2>
+            <form asp-controller="Home" asp-action="OdeslatData" method="post" enctype="multipart/form-data">
+                <input type="text" name="name" placeholder="Vaše jméno" required />
+                <input type="email" name="email" placeholder="Váš e-mail" required />
+                <input type="file" name="modelFile" required /> <!-- Pole pro nahrávání souboru -->
+                <textarea name="message" placeholder="Vaše zpráva"></textarea>
+                <button type="submit">Odeslat</button>
+            </form>
+
+            @if (ViewBag.Message != null)
+            {
+                <div class="alert alert-success">
+                    @ViewBag.Message
+                </div>
+            }
+        </section>
+    </main>
+
+    <!-- PATIČKA -->
+    <footer>
+        <p>&copy; 2024 3D Tisk. Všechna práva vyhrazena.</p>
+    </footer>
+</body>
+</html>

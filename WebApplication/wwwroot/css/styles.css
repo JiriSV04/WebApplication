@@ -1,0 +1,99 @@
+/* Základní stylování stránky */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333; /* Tmavší pozadí pro celou stránku */
+    color: #fff; /* Barva textu na bílé pozadí */
+}
+
+/* HEADER */
+header {
+    background-image: url('/images/wallpaperflare.com_wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Oddìlovací èára */
+.divider {
+    height: 5px;
+    background-color: #4CAF50;
+    margin: 20px 0;
+}
+
+/* Hlavní sekce */
+.about {
+    background-color: #555; /* Tmavší pozadí pro sekci 'about' */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+    .about h2,
+    .about p {
+        color: #fff; /* Svìtlá barva textu pro lepší kontrast */
+    }
+
+/* Formuláø */
+.form-section {
+    padding: 40px 20px;
+    background-color: #e0e0e0; /* Pùvodní barva pozadí pro formuláø */
+}
+
+input, textarea, button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4CAF50; /* Tmavá barva pro tlaèítko */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #45a049; /* Tmavší barva pøi hover */
+    }
+
+/* Patièka */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #222; /* Tmavší pozadí pro patièku */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.about ol {
+    margin: 20px auto; /* Vytvoøí prostor nad a pod seznamem */
+    padding-left: 20px; /* Pøidá padding na levé stranì pro oddìlení od textu */
+    max-width: 800px; /* Omezí maximální šíøku seznamu */
+    list-style-position: inside; /* Zaruèí, že èísla budou uvnitø bloku */
+}
+
+.about li {
+    margin-bottom: 10px; /* Pøidá prostor mezi jednotlivé položky */
+}
+
+/* Responsivní design */
+@media (max-width: 768px) {
+    header {
+        height: 200px; /* Menší výška pro mobilní zaøízení */
+    }
+
+    .about,
+    .form-section {
+        padding: 20px 10px; /* Menší padding na mobilních zaøízeních */
+    }
+}
